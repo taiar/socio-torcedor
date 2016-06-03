@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AMBEV - Socio Torcedor</title>
+<meta charset="utf-8">
+
+<!-- META -->
+<meta name="description" content="localStorage JCart">
+<meta name="author" content="Solutii Soft">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- END META -->
+
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="public/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="public/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="public/css/style.css">
+<!-- END CSS -->
+
+<!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<!-- END FONTS -->
+
+</head>
+<body>
+<header>
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
+				<div id="navCart" class="pull-right">
+					<div><a href="index.html" class="btn2 btn-checkout">&larr; Continuar a Compra</a> <button type="button" class="btn2 btn-checkout" title="remover lista">Reiniciar Compra</button> </div>
+					<div id="logo">
+						<img src="logo.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+	<div class="container">
+		<div class="row">
+			<h2 class="col-md-12">Itens </h2>
+			<div class="col-md-12">
+				<table id="cartContainer" class="table table-bordered">
+					<thead>
+						<tr>						
+							<th>Imagem Do Produto</th>
+							<th class="t-qty">Quantidade</th>
+							<th>Nome do Produto</th>
+							<th>Preço do Produto</th>
+							<th>Subtotal</th>
+							<th>Desconto Socio Torcedor</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="7" align="right"><span class="pull-right" style="font-size:25px;">Subtotal: </span> <span class="subtotal" style="font-size:25px; color:#333;">0,00</span></span></td>
+						</tr>
+						<tr>
+							<td colspan="7" align="right"><span class="pull-right" style="font-size:35px;">DESCONTO SOCIO TORCEDOR: </span> <span class="vat" style="font-size:35px; color:#D2322D;">0,00</span></span></td>
+						</tr>
+						<tr>
+							<td colspan="7" align="right"><span class="pull-right" style="font-size:25px;">TOTAL: </span> <span class="total" style="font-size:25px; color:#333;">0,00</span></span></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 phpCode"> </div>
+		</div>
+	</div>
+</main>
+<script type="text/javascript" src="public/js/jquery.js"></script> 
+<script type="text/javascript" src="public/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="public/js/twitter-bootstrap-hover-dropdown.min.js"></script> 
+<script type="text/javascript" src="public/js/localstorage-jcart.js"></script> 
+<script>
+    $('a.btn, .btn').tooltip({
+        "placement" : "top"
+    });
+        
+    /* === AJAX CODE => send items to .html file === */
+    $( ".actionCheckout" ).click(function(){
+        $.ajax({
+            url: "ajax.html",
+            dataType: "html",
+            type: "POST",
+            data: { shoppingCart: JSON.parse(localStorage.getItem( 'cartStorage' )) },
+            success: function(data) {
+                $( ".htmlCode" ).html(data);
+            }
+        });       
+
+        localStorage.setItem('cartStorage', null);   
+        updateDetails("cart");
+    });
+    /* === END AJAX CODE === */
+    
+</script>
+</body>
+</html>

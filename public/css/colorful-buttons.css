@@ -1,0 +1,30 @@
+    /* === WISH AND CART NAV BUTTONS === */
+    /* --- colorful buttons --- */
+    .btn-wish {
+        background-color: #BB1757;
+        color: #FFF;
+        box-shadow: 0 0 0 1px #DDDDDD inset;
+    }
+    .btn-cart {
+        background-color: #174B97;
+        color: #FFF;
+        box-shadow: 0 0 0 1px #DDDDDD inset;
+    }
+    .btn-checkout {
+        background-color: #4CAC52;
+        color: #FFF;
+        box-shadow: 0 0 0 1px #DDDDDD inset;    
+    }
+    .btn-wish:hover, 
+    .btn-wish:focus, 
+    .btn-cart:hover, 
+    .btn-cart:focus,
+    .btn-checkout:hover,
+    .btn-checkout:focus {
+        color: #FFFFFF;
+    }     
+    .caret {
+        border-top-color: #FFFFFF;
+    }
+    /* --- end colorful buttons --- */
+    /* === END WISH AND CART NAV BUTTONS === */

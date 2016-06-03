@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AMBEV - Socio Torcedor</title>
+<meta charset="utf-8">
+
+<!-- META -->
+<meta name="description" content="localStorage JCart">
+<meta name="author" content="Solutii Soft">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- END META -->
+
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="public/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="public/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="public/vendor/gritter/css/jquery.gritter.css">
+<link type="text/css" rel="stylesheet" href="public/css/style.css">
+<!-- END CSS -->
+
+<!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<!-- END FONTS -->
+
+</head>
+<body>
+
+<header>
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container"> 
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
+				<div id="navCart" class="pull-right">
+					<div style="width:230px; margin:0 auto;"> <a href="checkout.html" class="btn2 btn-checkout"><i class="fa fa-check"></i> Finalizar Carrinho</a> </div>
+					<div id="logo">
+						<img src="logo.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+	<div style="width:179px; margin:0 auto;">
+		<div class="btn-group">
+			<button data-toggle="dropdown" data-hover="dropdown" data-delay="100" class="btn2 btn-cart dropdown-toggle showCart" type="button"> <span class="cartCount">0</span> &rarr; <i class="fa fa-shopping-cart"></i> = <span class="subtotal">0,00</span> <span class="caret"></span> </button>
+			<div role="menu" class="dropdown-menu cartMenu">
+				<table class="cartContainer">
+					<thead>
+						<tr>
+							<th colspan="5">Lista</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5"><span class="pull-right">Subtotal <span class="subtotal">0,00</span></span></td>
+						</tr>
+						<!--
+						<tr>
+							<td colspan="5"><span class="pull-right">VAT <span class="vat">0.00</span></span></td>
+						</tr>
+						<tr>
+							<td colspan="5"><span class="pull-right">TOTAL <span class="total">0.00</span></span></td>
+						</tr>
+						<tr>
+							<td colspan="5"><button type="button" class="btn btn-danger btn-sm emptyCart pull-right">Remover Lista</button></td>
+						</tr>
+						-->
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<h2 class="col-md-12">Produtos</h2>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail"> <img src="public/upload/lata.png" alt="...">
+					<div class="caption">
+						<h4>Brahma 350ml</h4>
+						<ul class="list-inline">
+							<li class="old-price">R$ 3,50</li>
+							<li class="pull-right price">R$ 0,10</li>
+						</ul>
+						<div class="clearfix"></div>
+						
+						<!-- mandatory code -->
+						<p> <a href="#" class="btn btn-default color2 cart" role="button" title="adicionar ao carrinho"><i class="fa fa-shopping-cart"></i></a> </p>
+						<input type="hidden" name="product-id" value="1" p-name="Brahma 350ml" p-price="3.50" p-img="lata.png">
+						<!-- end mandatory code --> 
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail"> <img src="public/upload/garrafa.png" alt="...">
+					<div class="caption">
+						<h4>Brahma 600ml</h4>
+						<ul class="list-inline">
+							<li class="old-price">R$ 5,00</li>
+							<li class="pull-right price">R$ 0,20</li>
+						</ul>
+						<div class="clearfix"></div>
+						
+						<!-- mandatory code -->
+						<p> <a href="#" class="btn btn-default color2 cart" role="button" title="adicionar ao carrinho"><i class="fa fa-shopping-cart"></i></a> </p>
+						<input type="hidden" name="product-id" value="2" p-name="Brahma 600ml" p-price="5.00" p-img="garrafa.png">
+						<!-- end mandatory code --> 
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail"> <img src="public/upload/garrafa.png" alt="...">
+					<div class="caption">
+						<h4>Brahma 600ml</h4>
+						<ul class="list-inline">
+							<li class="old-price">R$ 5,00</li>
+							<li class="pull-right price">R$ 0,20</li>
+						</ul>
+						<div class="clearfix"></div>
+						
+						<!-- mandatory code -->
+						<p> <a href="#" class="btn btn-default color2 cart" role="button" title="adicionar ao carrinho"><i class="fa fa-shopping-cart"></i></a> </p>
+						<input type="hidden" name="product-id" value="3" p-name="Brahma 600ml" p-price="5.00" p-img="garrafa.png">
+						<!-- end mandatory code --> 
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail"> <img src="public/upload/garrafa.png" alt="...">
+					<div class="caption">
+						<h4>Brahma 600ml</h4>
+						<ul class="list-inline">
+							<li class="old-price">R$ 5,00</li>
+							<li class="pull-right price">R$ 0,20</li>
+						</ul>
+						<div class="clearfix"></div>
+						
+						<!-- mandatory code -->
+						<p> <a href="#" class="btn btn-default color2 cart" role="button" title="adicionar ao carrinho"><i class="fa fa-shopping-cart"></i></a> </p>
+						<input type="hidden" name="product-id" value="4" p-name="Brahma 600ml" p-price="5.00" p-img="garrafa.png">
+						<!-- end mandatory code --> 
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail"> <img src="public/upload/garrafa.png" alt="...">
+					<div class="caption">
+						<h4>Brahma 600ml</h4>
+						<ul class="list-inline">
+							<li class="old-price">R$ 5,00</li>
+							<li class="pull-right price">R$ 0,20</li>
+						</ul>
+						<div class="clearfix"></div>
+						
+						<!-- mandatory code -->
+						<p> <a href="#" class="btn btn-default color2 cart" role="button" title="adicionar ao carrinho"><i class="fa fa-shopping-cart"></i></a> </p>
+						<input type="hidden" name="product-id" value="5" p-name="Brahma 600ml" p-price="5.00" p-img="garrafa.png">
+						<!-- end mandatory code --> 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</main>
+<footer>
+	<div class="container">
+		<div class="row"> 
+			<!-- SHOW MESSAGES --> 
+			<!-- add to cart -->
+			<div class="cart-message">
+				<p>um produto foi adicionado ao carrinho...</p>
+			</div>
+			<!-- end add to cart --> 
+			
+			<!-- add to wish list -->
+			<div class="wish-message">
+				<p>um produto foi adicionado à lista...</p>
+			</div>
+			<!-- end add to wish list --> 
+			<!-- END SHOW MESSAGES -->
+		</div>
+	</div>
+</footer>
+<script type="text/javascript" src="public/js/jquery.js"></script> 
+<script type="text/javascript" src="public/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="public/js/twitter-bootstrap-hover-dropdown.min.js"></script> 
+<script type="text/javascript" src="public/vendor/gritter/js/jquery.gritter.min.js"></script> 
+<script type="text/javascript" src="public/js/localstorage-jcart.js"></script> 
+<script>
+    $('a.btn').tooltip({
+        "placement" : "top"
+    });
+
+    /* === SHOW MESSAGES === */
+    $('.cart-message, .wish-message').css('display','none');
+    function showMessage(value) {
+        $.gritter.add({
+            title: ' Information',				            // (string | mandatory) the heading of the notification
+            text: $('.' + value + '-message p').text(),	    // (string | mandatory) the text inside the notification
+            time: 2000							            // (int | optional) the time you want it to be alive for before fading out (milliseconds)
+        });
+    }
+    /* === END SHOW MESSAGES === */
+</script>
+</body>
+</html>
