@@ -28,7 +28,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
 				<div id="navCart" class="pull-right">
-					<div><a href="index.html" class="btn2 btn-checkout">&larr; Continuar a Compra</a> <button type="button" class="btn2 btn-checkout" title="remover lista">Reiniciar Compra</button> </div>
+					<div>
+						<a href="index.html" class="btn2 btn-checkout">&larr; Continuar a Compra</a>
+						<button type="button" id='reiniciar-compra' class="btn2 btn-checkout" title="Reiniciar compra">Reiniciar Compra</button>
+					</div>
 					<div id="logo">
 						<img src="logo.png" alt="" />
 					</div>
@@ -44,7 +47,7 @@
 			<div class="col-md-12">
 				<table id="cartContainer" class="table table-bordered">
 					<thead>
-						<tr>						
+						<tr>
 							<th>Imagem Do Produto</th>
 							<th class="t-qty">Quantidade</th>
 							<th>Nome do Produto</th>
@@ -77,15 +80,15 @@
 		</div>
 	</div>
 </main>
-<script type="text/javascript" src="public/js/jquery.js"></script> 
-<script type="text/javascript" src="public/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="public/js/twitter-bootstrap-hover-dropdown.min.js"></script> 
-<script type="text/javascript" src="public/js/localstorage-jcart.js"></script> 
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="public/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="public/js/localstorage-jcart.js"></script>
 <script>
     $('a.btn, .btn').tooltip({
         "placement" : "top"
     });
-        
+
     /* === AJAX CODE => send items to .html file === */
     $( ".actionCheckout" ).click(function(){
         $.ajax({
@@ -96,13 +99,13 @@
             success: function(data) {
                 $( ".htmlCode" ).html(data);
             }
-        });       
+        });
 
-        localStorage.setItem('cartStorage', null);   
+        localStorage.setItem('cartStorage', null);
         updateDetails("cart");
     });
     /* === END AJAX CODE === */
-    
+
 </script>
 </body>
 </html>
